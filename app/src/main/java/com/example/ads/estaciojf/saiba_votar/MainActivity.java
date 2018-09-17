@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         ValueEventListener msg = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Pergunta pergunta = dataSnapshot.getValue(Pergunta.class);
+                Log.i("FIRBASE", "AQUI");
+                Log.i("FIRBASE", pergunta.toString());
 
             }
 
@@ -41,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        }
+        };
+        mDatabase.addValueEventListener(msg);
 
     }
 }
