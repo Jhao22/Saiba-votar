@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Pergunta pergunta = dataSnapshot.getValue(Pergunta.class);
                 Log.i("FIRBASE", "AQUI");
-                Log.i("FIRBASE", pergunta.toString());
+                Log.i("FIRBASE", pergunta);
 
             }
 
